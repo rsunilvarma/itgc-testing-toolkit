@@ -1,0 +1,13 @@
+name,mfa,days,admin
+test.user01,TRUE,10,FALSE
+test.user02,FALSE,120,TRUE
+test.user03,TRUE,200,TRUE
+test.user04,FALSE,30,TRUE
+test.user05,TRUE,90,FALSE
+test.user06,FALSE,91,FALSE
+test.user07,TRUE,45,TRUE
+test.user08,FALSE,5,FALSE
+test.user09,TRUE,365,FALSE
+test.user10,TRUE,0,FALSE
+broken.user11,TRUE,,FALSE
+broken.user12,FALSE,abc,TRUE
