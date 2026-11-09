@@ -1,5 +1,10 @@
-# FUNCTIONS
+# Access Review Tool v0.1
+# Tests a user access export against MFA, dormancy and admin-MFA controls.
+# Usage: py access_review.py
 
+
+import csv
+from datetime import date
 
 import csv
 from datetime import date
