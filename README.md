@@ -86,6 +86,15 @@ Mapping is indicative; confirm against the framework versions used in your engag
 
 All data in `sample_data/` is fictional and created for testing. Never run this tool on real employee data without authorisation from the data owner.
 
+## Known limitations
+
+- MFA and admin values must be `true` or `false`; any other value (such as `yes`, `Y` or `N/A`) is silently treated as false, so an admin recorded as `Y` would not be checked for MFA.
+- Blank names and negative day counts are accepted without validation and tested like normal rows: a blank name produces findings against no identifiable user, and negative days look like a recent login, so the account passes the dormancy check.
+- Data issues are printed during the run but not saved to a file, so the record of excluded rows is lost when the terminal closes.
+- The input must use exactly the columns `name, mfa, days, admin`; exports with different column names will fail.
+
+These are addressed in the v0.2 and v1.0 items of the roadmap below. 
+
 ## Roadmap
 
 - **v0.2:** validate every field (MFA and admin values, blank names, negative days)
